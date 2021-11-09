@@ -23,15 +23,23 @@ public class ordenador {
     
     // Detalles
     public void imprimirDatos() {
-        System.out.println("Procesador: " + procesador + " | RAM: " + memoriaRAM + " | Ventiladores: " + ventiladoresFuncionando);
-    }
-    
-    public void estado() {
-        if (ventiladoresFuncionando == true) {
-            System.out.println("Ventiladores funcionando");
+        if (ventiladoresFuncionando == true) {  
+            System.out.println("Procesador: " + procesador + " | RAM: " + memoriaRAM + " | Ventiladores: Funcionando");
         }
         else {
-            System.out.println("Ventiladores apagados");
+            System.out.println("Procesador: " + procesador + " | RAM: " + memoriaRAM + " | Ventiladores: No estan funcionando");
         }
+
+    }
+    
+    public String getEstado() {
+        String encendido;
+        if (ventiladoresFuncionando == true) {
+            encendido = "Ventiladores funcionando";
+        }
+        else {
+            encendido = "Ventiladores apagados";
+        }
+        return encendido;
     }
 }
