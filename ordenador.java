@@ -17,6 +17,14 @@ public class ordenador {
         return gastoTotal;
     }
     
+    public int getmemoriaRAM() {
+        return memoriaRAM;
+    }
+    
+    public boolean getVentiladores() {
+        return ventiladoresFuncionando;
+    }
+    
     public void botonEncendido() {
         ventiladoresFuncionando = !ventiladoresFuncionando;
     }
@@ -33,6 +41,7 @@ public class ordenador {
     }
     
     public String getEstado() {
+        String estado;
         String encendido;
         if (ventiladoresFuncionando == true) {
             encendido = "Ventiladores funcionando";
@@ -40,6 +49,7 @@ public class ordenador {
         else {
             encendido = "Ventiladores apagados";
         }
-        return encendido;
+        estado = ("Nombre del procesador: " + procesador + " | Tamaño de la memoria RAM: " + memoriaRAM + " | Encendido o apagado: " + encendido);
+        return estado;
     }
 }
